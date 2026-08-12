@@ -1,0 +1,20 @@
+body {
+    background-color: #f4f5f7;
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.badge.fs-1 {
+    font-size: 2rem !important;
+    padding: 0.4em 0.6em;
+}
+
+footer {
+    font-size: 0.85rem;
+}
