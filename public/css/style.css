@@ -1,0 +1,138 @@
+:root {
+    --trustic-bg: #14161c;
+    --trustic-surface: #1e212b;
+    --trustic-surface-2: #262a37;
+    --trustic-border: #333747;
+    --trustic-text: #e7e9ee;
+    --trustic-text-muted: #9aa0b0;
+    --trustic-amarelo: #ffc93c;
+    --trustic-verde: #3cb371;
+    --trustic-amarelo-nota: #f5c518;
+    --trustic-vermelho: #e6483c;
+}
+
+body {
+    background-color: var(--trustic-bg);
+    color: var(--trustic-text);
+}
+
+a { color: var(--trustic-amarelo); }
+a:hover { color: #ffd766; }
+
+.trustic-navbar {
+    background-color: var(--trustic-surface);
+    border-bottom: 1px solid var(--trustic-border);
+}
+
+.trustic-footer {
+    background-color: var(--trustic-surface);
+    border-top: 1px solid var(--trustic-border);
+}
+
+.avatar-navbar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--trustic-surface-2);
+}
+
+.avatar-grande {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--trustic-surface-2);
+    border: 3px solid var(--trustic-border);
+}
+
+/* ---------- Cards ---------- */
+.card, .trustic-card {
+    background-color: var(--trustic-surface);
+    border: 1px solid var(--trustic-border);
+    color: var(--trustic-text);
+}
+
+.trustic-card:hover {
+    border-color: var(--trustic-amarelo);
+    transition: border-color .15s ease-in-out;
+}
+
+.card-title, .card-text { color: var(--trustic-text); }
+.text-muted { color: var(--trustic-text-muted) !important; }
+
+.form-control, .form-select {
+    background-color: var(--trustic-surface-2);
+    border: 1px solid var(--trustic-border);
+    color: var(--trustic-text);
+}
+.form-control:focus, .form-select:focus {
+    background-color: var(--trustic-surface-2);
+    color: var(--trustic-text);
+    border-color: var(--trustic-amarelo);
+    box-shadow: 0 0 0 .2rem rgba(255, 201, 60, .25);
+}
+.form-control::placeholder { color: var(--trustic-text-muted); }
+
+.table {
+    color: var(--trustic-text);
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--trustic-surface-2);
+    color: var(--trustic-text);
+}
+
+/* ---------- Badges de nota (estilo Metascore) ---------- */
+.nota-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 4px;
+    min-width: 2.4em;
+    padding: 0.15em 0.5em;
+}
+.nota-badge.tamanho-grande { font-size: 2rem; min-width: 2.2em; padding: 0.2em 0.3em; border-radius: 8px; }
+
+.nota-boa    { background-color: var(--trustic-verde); color: #08210f; }
+.nota-mediana{ background-color: var(--trustic-amarelo-nota); color: #2b2200; }
+.nota-ruim   { background-color: var(--trustic-vermelho); color: #2b0906; }
+.nota-neutra { background-color: #555a6b; color: #dfe1e8; }
+
+/* ---------- Hero da home ---------- */
+.trustic-hero {
+    background: linear-gradient(135deg, #1c2030 0%, #262b3e 100%);
+    border: 1px solid var(--trustic-border);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+}
+.trustic-hero h1 { font-weight: 800; }
+.trustic-hero .bi { color: var(--trustic-amarelo); }
+
+.capa-jogo {
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+    background: var(--trustic-surface-2);
+}
+
+.btn-warning {
+    background-color: var(--trustic-amarelo);
+    border-color: var(--trustic-amarelo);
+    color: #241c00;
+    font-weight: 600;
+}
+.btn-warning:hover { background-color: #ffd766; border-color: #ffd766; color: #241c00; }
+
+.btn-favorito.ativo {
+    background-color: var(--trustic-vermelho);
+    border-color: var(--trustic-vermelho);
+    color: #fff;
+}
+
+/* ---------- Impressão do relatório ---------- */
+@media print {
+    .no-print, nav, footer { display: none !important; }
+    body { background: #fff; color: #000; }
+    .card, .table { border-color: #ccc !important; }
+}
